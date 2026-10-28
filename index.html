@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Portfólio - Gamer, Atleta & Chef</title>
+  <style>
+    /* Estilos Gerais (Modo Claro com toque Rosa, Vermelho e Preto) */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fce4ec; /* Fundo suave levemente rosado */
+      color: #212121;
+      margin: 0;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(135deg, #000000, #c62828); /* Preto e Vermelho Corinthians */
+      color: white;
+      padding: 15px 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    /* Estilo do Avatar / Boneco */
+    .container-avatar {
+      text-align: center;
+      margin: 15px 0;
+    }
+
+    .avatar-img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #d81b60; /* Borda rosa vibrante */
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+      transition: transform 0.3s;
+    }
+
+    .avatar-img:hover {
+      transform: scale(1.05);
+    }
+
+    .card {
+      background-color: #ffffff;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-left: 6px solid #d81b60; /* Detalhe em rosa */
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .card h2 {
+      color: #c62828;
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    button {
+      padding: 10px 18px;
+      font-size: 14px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: #d81b60; /* Rosa vibrante */
+      color: white;
+      margin-top: 10px;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background-color: #ad1457;
+    }
+
+    /* Classe para esconder a curiosidade inicialmente */
+    .escondido {
+      display: none;
+    }
+
+    #texto-curiosidade {
+      background-color: #ffebee;
+      padding: 12px;
+      border-radius: 6px;
+      border-left: 4px solid #c62828;
+      margin-top: 10px;
+    }
+
+    /* --- ESTILOS DO DARK MODE --- */
+    body.dark {
+      background-color: #121212;
+      color: #f5f5f5;
+    }
+
+    body.dark header {
+      background: linear-gradient(135deg, #1f1f1f, #8e0000);
+    }
+
+    body.dark .card {
+      background-color: #1e1e1e;
+      color: #f5f5f5;
+      border-left-color: #ff4081;
+    }
+
+    body.dark .card h2 {
+      color: #ff5252;
+    }
+
+    body.dark button {
+      background-color: #ff4081;
+      color: #121212;
+    }
+
+    body.dark button:hover {
+      background-color: #f50057;
+    }
+
+    body.dark #texto-curiosidade {
+      background-color: #2c151a;
+      border-left-color: #ff5252;
+    }
+
+    body.dark .avatar-img {
+      border-color: #ff4081;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho com Dark Mode -->
+  <header>
+    <h1>Meu Portfólio 🎮💪👨‍🍳</h1>
+    <button id="btn-tema">🌙 Alternar Tema</button>
+  </header>
+
+  <main>
+    <!-- Seção Sobre Mim com o Avatar -->
+    <section class="card">
+      <div class="container-avatar">
+        <!-- Avatar personalizado -->
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczPlZ1d43aLz482aG3S2J5aE2fG5X3E1h4c2a5=s500" alt="Meu Avatar Gamer & Atleta" class="avatar-img">
+      </div>
+
+      <h2>Sobre Mim</h2>
+      <p>Fala, galera! Tenho <strong>16 anos</strong>, sou corinthiano roxo 🏴🏳️ e apaixonado por tecnologia, games, musculação e culinária!</p>
+      
+      <h3>Meus Hobbies e Paixões:</h3>
+      <ul>
+        <li>⚽ <strong>Futebol:</strong> Torcedor fiel do Timão (Corinthians)!</li>
+        <li>🎯 <strong>Games:</strong> Jogo muito <strong>CS2</strong> e <strong>Valorant</strong> nas horas livres.</li>
+        <li>🏋️ <strong>Fisiculturismo:</strong> Amo treinar pesado e focar na evolução constante do shape.</li>
+        <li>🍳 <strong>Cozinha:</strong> Adoro preparar minhas próprias refeições e experimentar novas receitas fit!</li>
+      </ul>
+
+      <h3>Meus Objetivos:</h3>
+      <p>🚀 No futuro, quero muito me tornar <strong>streamer</strong> de sucesso e <strong>competir no fisiculturismo</strong> profissionalmente!</p>
+    </section>
+
+    <!-- Seção de Curiosidade Oculta (Desafio DOM 2) -->
+    <section class="card">
+      <h2>Curiosidade Secreta</h2>
+      <p>Quer saber uma curiosidade sobre mim? Clique no botão abaixo:</p>
+      
+      <button id="btn-curiosidade">🔍 Revelar Curiosidade</button>
+      <p id="texto-curiosidade" class="escondido">
+        💡 <strong>Curiosidade:</strong> Além de mandar bem nas partidas de CS2 e Valorant, eu também mando super bem na cozinha preparando pratos incríveis para fechar a dieta do fisiculturismo! 🍲🏋️‍♂️
+      </p>
+    </section>
+
+    <!-- Seção de Curtidas (Desafio DOM 3) -->
+    <section class="card">
+      <h2>Curtiu o meu perfil?</h2>
+      <button id="btn-curtir">❤️ Curtir</button>
+      <span id="contador" style="margin-left: 10px; font-weight: bold;">0 curtidas</span>
+    </section>
+  </main>
+
+  <script>
+    // ================================================
+    // DESAFIO 01: DARK MODE
+    // ================================================
+    const btnTema = document.getElementById("btn-tema");
+
+    btnTema.addEventListener("click", function () {
+      document.body.classList.toggle("dark");
+    });
+
+
+    // ================================================
+    // DESAFIO 02: CURIOSIDADE OCULTA
+    // ================================================
+    const btnCuriosidade = document.getElementById("btn-curiosidade");
+    const textoCuriosidade = document.getElementById("texto-curiosidade");
+
+    btnCuriosidade.addEventListener("click", function () {
+      if (textoCuriosidade.style.display === "block") {
+        textoCuriosidade.style.display = "none";
+        btnCuriosidade.textContent = "🔍 Revelar Curiosidade";
+      } else {
+        textoCuriosidade.style.display = "block";
+        btnCuriosidade.textContent = "🙈 Esconder Curiosidade";
+      }
+    });
+
+
+    // ================================================
+    // DESAFIO 03: CONTADOR DE CURTIDAS
+    // ================================================
+    const btnCurtir = document.getElementById("btn-curtir");
+    const contador = document.getElementById("contador");
+
+    let curtidas = 0;
+
+    btnCurtir.addEventListener("click", function () {
+      curtidas++;
+      contador.textContent = `${curtidas} curtidas`;
+    });
+  </script>
+</body>
+</html>
